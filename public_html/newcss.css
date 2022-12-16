@@ -1,0 +1,244 @@
+:root {
+    /* Coolors Exported Palette - https://coolors.co/ef476f-ffd166-06d6a0-118ab2-073b4c */
+
+    /* CSS HSL */
+    --paradise-pink: hsla(346, 84%, 61%, 1);
+    --orange-yellow-crayola: hsla(42, 100%, 70%, 1);
+    --caribbean-green: hsla(164, 95%, 43%, 1);
+    --blue-ncs: hsla(195, 83%, 38%, 1);
+    --midnight-green-eagle-green: hsla(195, 83%, 16%, 1);
+}
+* {
+    font-family: 'Monaco',monospace;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+nav{
+    background-color: #1fb0c6;
+}
+.chip{
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.25);
+    margin: 0 10px;
+    background-color: #17a2b8;
+    color: whitesmoke;
+
+}
+.carouselheight{
+    text-align: center;
+    height: 54px;
+}
+.flecha{
+    color: gray;
+}
+
+.preloader {
+    align-items: center;
+    background-image: linear-gradient(to right, var(--caribbean-green),var(--blue-ncs),var(--caribbean-green), var(--blue-ncs)) ;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    animation: fadeOut 3s ease-in;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity:1
+    }
+    33%{
+        opacity:0.75
+    }
+    66% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.portada_fondo, nav{
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity:0
+    }
+    33%{
+        opacity:0.75
+    }
+    66% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+.titulo-container{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+}
+
+.titulo-portada{
+    font-family: 'Monaco', cursive ;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .titulo-portada{
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .titulo-portada{
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-width: 380px) {
+    .titulo-portada{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .titulo-portada{
+        font-size: 3rem;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .titulo-portada{
+        font-size: 4rem;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .titulo-portada{
+        font-size: 4rem;
+    }
+}
+
+.flag-switch {
+    position: relative;
+    outline: 0;
+    appearance: none;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    width: 60px;
+    height: 30px;
+    margin: 5px auto;
+}
+.flag-switch:before, .flag-switch:after {
+    position: absolute;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    top: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.flag-switch:before {
+    left: -25px;
+    content: attr(data-first-lang);
+}
+.flag-switch:after {
+    right: -25px;
+    content: attr(data-second-lang);
+}
+.flag-switch input {
+    display: none;
+}
+.flag-switch input + label {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    width: 60px;
+}
+.flag-switch input + label:before, .flag-switch input + label:after {
+    content: "";
+    position: absolute;
+    border-radius: 30px;
+    transition: all 0.25s ease-in-out;
+}
+.flag-switch input + label:before {
+    height: 30px;
+    width: 60px;
+    background-color: #f70723;
+}
+.flag-switch input + label:after {
+    top: 3px;
+    left: 3px;
+    border: 2px solid #dfdfdf;
+    width: 24px;
+    height: 24px;
+    background: #eb3 url(https://i.imgur.com/pxxUsQs.jpg) -26px center;
+    transform: translate(30px, 0);
+    -webkit-transform: translate(30px, 0);
+}
+.flag-switch input:checked + label:after {
+    background: #000233 url(https://i.imgur.com/pxxUsQs.jpg) -2px center;
+    transition: all 0.25s ease-in-out;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.flag-switch input:checked + label:before {
+    background-color: #ffffff;
+}
+
+.typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+        typing 2.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: black
+    }
+}
